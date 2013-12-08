@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test PlayApp</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="js/mwheelIntent.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+
+    <script type="text/javascript" src="js/playApp.js"></script>
+    <script type="text/javascript" src="js/FacebookClient.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            window.playApp = new playApp({
+                apiHost: 'http://www.playappli.com/playapp/api/',
+                facebookAppId: '385228051612123',
+                form: $('form[name="playAppForm"]'),
+                errorArea: $('.renderRemoteError'),
+                successArea: $('.remoteApiSuccess'),
+                article: $('.article')
+            });
+        })
+    </script>
+</head>
+
+<body>
+<div id="site">
+
+    <header>
+        <div class="header container hidden-xs">
+            <div class="col-xs-12">
+                <div class="headLine ">&nbsp;</div>
+                <div class="introduction">
+
+                    <img  src="img/extend.jpeg" alt=""/>
+
+                    <div class="text-center">PlayApp</div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+        <div class="container">
+            <div class="col-sm-12 col-md-6">
+
+                <div class='renderRemoteError'>
+                    <div class="alert alert-danger"></div>
+                    <button class="right">Retour</button>
+                </div>
+
+                <div class="remoteApiSuccess">
+                    <h1>Vous &ecirc;tes bien enregistr&eacute; aupr&egrave;s du service PlayApp.</h1>
+                    <pre>
+
+                    </pre>
+                </div>
+                <!-- Formulaire -->
+                <form name="playAppForm">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9 text-center">
+                            <h2>Merci de remplir le formulaire</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 text-right">
+                            <label>Nom</label>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9">
+                            <input type="text" name='lastName' placeholder="Votre nom" required />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 text-right">
+                            <label>Pr&eacute;nom</label>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9">
+                            <input type="text" name="firstName" required placeholder="Votre prenom"  />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 text-right">
+                            <label>Email</label>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9">
+                            <input type="email" name='email' placeholder="Email" required />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9 text-right">
+                            <small>* Champs obligatoires</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9">
+                            <input checked type="checkbox" name="nl" value="1" />
+                            Je souhaite recevoir la Newsletter PlayApp
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9">
+                            Je souhaite suivre PlayApp
+                            <input type="radio" checked name="followPlayApp" id="followYes" value="1" /><label for="followYes">Oui</label>
+                            <input type="radio" name="followPlayApp" id="followNo" value="0" /><label for="followNo">Non</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-9 text-center">
+                            <input type="submit" value="Valider" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="article">
+                    <div class="head row">
+                        <div class="col-xs-2">
+
+                                <img class="illustration img-responsive left" src="img/PHOTO.png"/>
+                            </div>
+
+                        <div class="col-xs-10">
+                                <h1>Winter is coming</h1>
+                                <h2>Lorem ipsum dolor</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="content col-xs-12">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum ante ut massa
+                            ultricies ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                            per inceptos himenaeos. Vivamus consectetur justo ac eros sagittis, id vestibulum nisi
+                            imperdiet. Aliquam et mauris odio. Suspendisse ut elit iaculis, sagittis lacus sed,
+                            viverra neque. Proin tincidunt, elit a malesuada porttitor, ipsum nulla consequat arcu,
+                            non auctor tellus lorem vitae elit. Nullam quis velit sapien. Nunc ultricies eleifend
+                            vehicula. Praesent eget nibh eget est varius tempus sed ut risus. Praesent ac ipsum in
+                            felis tincidunt pellentesque. Aenean egestas sollicitudin eros, a aliquam nibh mattis
+                            facilisis. Donec id faucibus diam.
+                        </p>
+
+                        <p>
+                            Nulla ut ultrices velit. Phasellus fermentum rutrum massa, sed pellentesque nunc mattis
+                            sed. Suspendisse ac egestas odio. Mauris in lacus sit amet neque vehicula lobortis a
+                            vitae sapien. Sed sit amet tellus volutpat, ultrices lacus vitae, faucibus justo.
+                            Aliquam aliquet aliquam molestie. Aenean erat arcu, facilisis non mollis at, pulvinar
+                            sed nunc. Mauris a tempus nunc, commodo hendrerit leo. Nulla facilisi. Morbi vel sem sit
+                            amet libero egestas adipiscing ut ac lectus. Aliquam ultrices tincidunt neque
+                            sollicitudin tempus. Cras a risus sit amet sapien placerat laoreet at volutpat justo.
+                            Maecenas porta, elit vel auctor egestas, sapien arcu faucibus lacus, sed pellentesque
+                            urna felis nec velit. Aliquam facilisis lorem eu sem lobortis porttitor.
+                        </p>
+
+                        <p>
+                            Cras interdum eros dolor, ac elementum lacus feugiat rhoncus. Morbi lacus lectus,
+                            elementum vel ullamcorper sit amet, tempus vel ipsum. Suspendisse pretium sem sem. Etiam
+                            ac nibh ut risus adipiscing suscipit. Quisque fringilla interdum tortor. Cras fermentum
+                            elit sed est eleifend placerat. Aliquam erat volutpat. Nam nec adipiscing justo, id
+                            cursus turpis.
+                        </p>
+
+                        <p>
+                            Suspendisse at scelerisque mi. Ut sed arcu nec lorem placerat commodo. Vestibulum sed
+                            dapibus risus, ac condimentum leo. Integer sem erat, vestibulum molestie purus in,
+                            tincidunt porta leo. Sed suscipit congue metus et porttitor. Cum sociis natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam dignissim,
+                            metus quis cursus fermentum, purus eros tempus mauris, nec volutpat ligula ante eget
+                            sem. Praesent ornare, nibh vel gravida sollicitudin, nulla ante accumsan lacus, vel
+                            lobortis neque diam id nibh. Curabitur lacinia lacus nulla, sed sodales nisi pretium
+                            convallis. Praesent eleifend augue in purus suscipit consectetur. Mauris et ultricies
+                            ante, ut vulputate nisi. Morbi vel metus sodales, imperdiet purus nec, venenatis est.
+                            Suspendisse vitae est quam. Integer vel lorem quam. In eu urna sit amet diam mollis
+                            porta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

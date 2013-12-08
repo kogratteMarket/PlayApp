@@ -1,0 +1,48 @@
+
+@articleTitleColor: #5E6D81;
+@articleSubtitleColor: #9EA7B3;
+@articleMainColor: #5E6D81;
+@scrollBarColor: #1BE5C9;
+@scrollBarElevatorColor: #1FBEA9;
+
+  .article {
+    margin-top: @blockMargin;
+    background: white;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-wrap: normal;
+    text-align: justify;
+    max-height: 350px;
+    margin-bottom: 30px;
+
+    .head {
+      h1 {
+        color: @articleTitleColor;
+        font-size: 2em;
+        margin-top: 20px;
+      }
+      h2 {
+        color: @articleSubtitleColor;
+        font-size: 1.2em;
+      }
+
+      h1, h2 {
+        line-height: 1;
+      }
+padding: @padding;
+      font-size: 1.2em;
+    }
+
+    .content {
+      color: @articleMainColor;
+      padding: @padding;
+    }
+
+    .jspHorizontalBar { display: none; }
+    .jspVerticalBar {
+      width: 10px;
+      background: @scrollBarColor;
+
+    }
+  }

@@ -1,0 +1,31 @@
+@import 'mixins.less';
+@import "jquery.jscrollpane.less";
+@import 'Bootstrap/bootstrap.less';
+
+
+@padding: 12px;
+@mainColor: #1FBBA6;
+@backgroundColor: #EAEDF1;
+@inputBackgroundColor: #DDE0E3;
+
+@submitButtonFromColor: #1BE6CB;
+@submitButtonEndColor: #1FBBA6;
+
+@blockMargin: 2rem;
+
+.fontface('signikaLight', 'signika-light');
+
+html {
+  background: @backgroundColor;
+}
+
+#site {
+  color: @mainColor;
+  background-color: @backgroundColor;
+  font-size: 12px;
+  padding: 0 15px;
+}
+
+@import "header.less";
+@import "registrationForm.less";
+@import "article.less";

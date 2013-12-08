@@ -1,0 +1,73 @@
+
+form {
+  margin-top: @blockMargin;
+  h2 {
+    font-family: 'signika';
+    font-size: 2.2em;
+    color: @mainColor;
+  }
+  .row {
+    margin-bottom: @padding;
+  }
+  font-size: 1em;
+
+  small {
+    font-size: 1em;
+  }
+  label {
+    &:before {
+      content: '';
+      vertical-align: middle;
+    }
+    font-size: 1.5em;
+    color: @mainColor;
+    padding: @padding;
+  }
+  input[type='text'], input[type='email'] {
+    padding: @padding;
+    width: 100%;
+
+    background: #dde0e3;
+  }
+
+  .choice {
+    font-size: 1em;
+    input[type='radio'] {
+      margin-left: 10px;
+    }
+    label {
+      padding: 0;
+font-size: 1em;
+    }
+  }
+
+  .error {
+    border: red;
+    background: #ffccb9;
+  }
+
+  label.required:after {
+    content: ' *'
+  }
+}
+
+.renderRemoteError, .remoteApiSuccess {
+  margin-top: @blockMargin;
+  display: none;
+}
+
+input[type='submit'], button {
+  .backgroundGradiant(@submitButtonFromColor, @submitButtonEndColor);
+  .rounded-corners(3px);
+  border: none;
+  color: white;
+  padding: 12px 100px 12px 100px;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+button {
+  font-size: 1em;
+  padding: 6px 50px 6px 50px;
+}
+

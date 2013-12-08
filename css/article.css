@@ -1,0 +1,20 @@
+article .article {
+  background: white;
+  width: 100%;
+  overflow-y: scroll;
+  word-wrap: normal;
+  text-align: justify;
+  max-height: 350px;
+}
+article .article .head h1 {
+  color: #5e6d81;
+}
+article .article .head h2 {
+  color: #9ea7b3;
+}
+article .article .content {
+  color: #5e6d81;
+}
+article .article .jspVerticalBar {
+  width: 10px;
+}
